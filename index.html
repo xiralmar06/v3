@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovet 2030 - Fluidez Total</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blanco-nube: rgba(255, 255, 255, 0.95);
+            --azul-tecnologico: #007AFF; /* Estilo Apple para precisión */
+            --gris-limpio: #fbfbfb;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Contenedor de servicios con scroll horizontal fluido */
+        .seccion-servicios {
+            padding: 80px 20px;
+            background: var(--gris-limpio);
+            text-align: center;
+        }
+
+        .titulo-seccion {
+            font-weight: 100;
+            font-size: 2.5em;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .contenedor-fluido {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; /* Fluidez máxima en iOS */
+        }
+
+        /* Ocultar barra de scroll para estética limpia */
+        .contenedor-fluido::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tarjeta-servicio {
+            min-width: 280px;
+            background: var(--blanco-nube);
+            border-radius: 25px;
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .tarjeta-servicio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .tarjeta-servicio img {
+            width: 80px; /* Tamaño generoso para no apiñar */
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 5px 15px rgba(0,122,255,0.2));
+        }
+
+        .nombre-servicio {
+            font-weight: 300;
+            font-size: 1.2em;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        /* Botón de acción rápido */
+        .btn-gestion {
+            margin-top: auto;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: var(--azul-tecnologico);
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="seccion-servicios">
+        <h2 class="titulo-seccion">Servicios 2030</h2>
+        
+        <div class="contenedor-fluido">
+            <div class="tarjeta-servicio">
+                <img src="https://inovet.co/imagenes/radiologia.png" alt="Radiología">
+                <div class="nombre-servicio">Radiología Digital</div>
+                <a href="#" class="btn-gestion">Ver Resultados</a>
+            </div>
+
+            <div class="tarjeta-servicio">
+                <img src="https://inovet.co/imagenes/neurologia.png" alt="Neurología">
+                <div class="nombre-servicio">Neurología Veterinaria</div>
+                <a href="#" class="btn-gestion">Consultar</a>
+            </div>
+
+            <div class="tarjeta-servicio">
+                <img src="https://inovet.co/imagenes/electroencefalograma.png" alt="Encefalograma">
+                <div class="nombre-servicio">Encefalograma</div>
+                <a href="#" class="btn-gestion">Agendar</a>
+            </div>
+
+            <div class="tarjeta-servicio">
+                <img src="https://inovet.co/imagenes/ortopedia1.png" alt="Ortopedia">
+                <div class="nombre-servicio">Ortopedia Especializada</div>
+                <a href="#" class="btn-gestion">Detalles</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
